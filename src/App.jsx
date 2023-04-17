@@ -1,4 +1,5 @@
 import Post from "./components/Post";
+import PostsList from "./components/PostsList";
 
 function App() {
 
@@ -6,11 +7,10 @@ function App() {
 
     <main>
 
-    <Post author="Thedyson" body="I am a guy" />
-    <Post author="Troy" body="I am also a guy"/>
+<PostsList />
 
     </main>
     );
 }
 
-export default App
+export default App;
