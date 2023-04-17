@@ -4,23 +4,24 @@ import PostsList from "./components/PostsList";
 
 function App() {
 
-  const [modalIsvisible, setModalIsVisible] = useState(false);
+  const [modalIsVisible, setModalIsVisible] = useState(false);
 
-  function hideModalHandler(){
+  function hideModalHandler() {
     setModalIsVisible(false);
-}
-  function showModalHandler(){
+  }
+
+  function showModalHandler() {
     setModalIsVisible(true);
-}
+  }
 
   return (
     <>
-    <MainHeader onCreatePost={showModalHandler} />
+      <MainHeader onCreatePost={showModalHandler} />
       <main>
-        <PostsList isPosting={modalIsvisible} onStopPosting={hideModalHandler} />
+        <PostsList isPosting={modalIsVisible} onStopPosting={hideModalHandler}/>
       </main>
     </>
-    );
+  );
 }
 
-export default App;
+export default App
